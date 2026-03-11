@@ -1,143 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Happy Birthday My Love</title>
+  <meta charset="UTF-8">
+  <title>Happy Birthday, Love!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans&display=swap" rel="stylesheet">
 <style>
-
-body{
-  margin:0;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
-  font-family: Arial;
-  overflow:hidden;
-}
-
-/* VIDEO BACKGROUND */
-#bgVideo{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(90deg);
-  width: 100vh;
-  height: 100vw;
-  object-fit: cover;
-  z-index: -2;
-}
-
-
-/* Dark overlay for better text visibility */
-.overlay{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.3);
-  z-index:-1;
-}
-
-h1{
-  font-size:60px;
-  color:#ffffff;
-  animation: pop 2s infinite alternate;
-}
-
-@keyframes pop{
-  from{transform:scale(1);}
-  to{transform:scale(1.1);}
-}
-
-.animals{
-  font-size:70px;
-  margin-top:20px;
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce{
-  0%,100%{transform:translateY(0);}
-  50%{transform:translateY(-30px);}
-}
-
-.flowers{
-  position:absolute;
-  width:100%;
-  height:100%;
-  top:0;
-  left:0;
-  pointer-events:none;
-}
-
-.flower{
-  position:absolute;
-  font-size:30px;
-  animation: fall 6s linear infinite;
-}
-
-@keyframes fall{
-  0%{
-    transform:translateY(-100px) rotate(0deg);
+  body { margin:0; font-family:'Josefin Sans', sans-serif; color:#333; }
+  header.hero {
+    position: relative;
+    color:#fff;
+    text-shadow: 1px 1px 4px #000;
+    text-align:center;
+    padding:6rem 1rem;
+    overflow:hidden;
   }
-  100%{
-    transform:translateY(100vh) rotate(360deg);
+
+  header.hero::before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url('C:/zoo/Snapchat-513806524.jpg') center/cover no-repeat;
+    opacity:0.4;   /* controls transparency */
+    z-index:-1;
   }
-}
-
-.message{
-  margin-top:20px;
-  font-size:22px;
-  color:#ffffff;
-  text-align:center;
-}
-
-</style>
+    header.hero h1 { font-family:'Dancing Script', cursive; font-size:3em; margin:0.3em 0; }
+    header.hero p { font-size:1.2em; }
+    #timer { font-size:1.5em; margin-top:0.5em; }
+    section.messages { padding:2em 1em; background:#FFF8E7; text-align:center; }
+    section.messages p { margin:0.8em 0; }
+    .flip-container {
+      display:flex; flex-wrap:wrap; justify-content:center; padding:2em 1em; background:#E6E6FA;
+    }
+    .flip-card {
+      width:220px; height:150px; margin:1em; perspective:1000px;
+    }
+    .flip-card-inner {
+      position:relative; width:100%; height:100%;
+      text-align:center; transition: transform 0.6s; transform-style:preserve-3d;
+      border:1px solid #ddd; border-radius:8px;
+    }
+    .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+    .flip-card-front, .flip-card-back {
+      position:absolute; width:100%; height:100%;
+      backface-visibility:hidden; display:flex;
+      justify-content:center; align-items:center; padding:1em;
+      box-sizing:border-box; font-family: inherit;
+    }
+    .flip-card-front { background:#FEC8D6; color:#5E1D4C; font-weight:bold; }
+    .flip-card-back {
+      background:#FFF; color:#5E1D4C; transform:rotateY(180deg);
+    }
+    footer { text-align:center; padding:1em; font-size:0.9em; color:#666; }
+    /* Mobile */
+    @media(max-width:600px){
+      header.hero h1 { font-size:2.2em; }
+      header.hero p, #timer { font-size:1em; }
+      .flip-card { width:100%; margin:0.5em 0; }
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- VIDEO BACKGROUND -->
-<video autoplay muted loop id="bgVideo">
-  <source src="Snapchat-638617786.mp4" type="video/mp4">
-</video>
+  <header class="hero">
+    <h1>Advance Happy Birthday, My lil potatooo!</h1>
+    <p>Countdown to April 13, 2026:</p>
+    <div id="timer">--d --h --m --s</div>
+  </header>
 
-<div class="overlay"></div>
+  <section class="messages">
+    <p>I can’t wait to celebrate you. You light up my world every day.</p>
+    <p>Thank you for making life sweeter. Your birthday is going to be amazing!
+      This is your first birthday that we will celebrate together and i am so excited for it. I hope this day will be as special as you are to me. I love you so much and i wish you all the happiness in the world on your birthday and always.
+    </p>
+    <p>Sending love and big hugs today. 🎂❤️</p>
+  </section>
 
-<h1>🎉 Happy Birthday 🎉</h1>
+  <section class="flip-container">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">Why I Love You</div>
+        <div class="flip-card-back">You are the one which feels like home and close to my heart! 😊</div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">Reason #2</div>
+        <div class="flip-card-back">Your smile is my favorite sight. And you cuteness pretty eyes my beautyy 😊</div>
+      </div>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">Reason #3</div>
+        <div class="flip-card-back">I'm so proud of you, always.And i will be there for you always in every moment and situation ❤️</div>
+      </div>
+    </div>
+    <!-- More flip-cards as needed -->
+  </section>
 
-<div class="animals">
-🐱 🐶 🐱 🐶
-</div>
+  <footer>
+    Made with ❤️ and excitement for your birthday. See you on April 13!<br>
+    <!-- Social/share links could go here -->
+  </footer>
 
-<div class="message">
-Sending you lots of love, hugs, kisses and happiness  
-mwahhh myy cutuuu 💖
-</div>
+  <script>
+    // Countdown Script
+    const countdown = () => {
+      const now = new Date();
+      const target = new Date("2026-04-13T00:00:00");
+      const diff = target - now;
+      if (diff < 0) {
+        document.getElementById("timer").innerText = "🎉 Happy Birthday! 🎉";
+        clearInterval(timerInterval);
+        setTimeout(() => {
+          window.open("gift.html", "_blank");
+        }, 2000);
+        return;
+      }
+      const days = Math.floor(diff/86400000),
+            hrs  = Math.floor((diff%86400000)/3600000),
+            mins = Math.floor((diff%3600000)/60000),
+            secs = Math.floor((diff%60000)/1000);
+      document.getElementById("timer").innerText =
+        `${days}d ${hrs}h ${mins}m ${secs}s`;
+    };
+    const timerInterval = setInterval(countdown, 1000);
+    countdown(); // initial call
+  </script>
 
-<div class="flowers" id="flowers"></div>
-
-<script>
-
-const container = document.getElementById("flowers");
-
-function createFlower(){
-  const flower = document.createElement("div");
-  flower.classList.add("flower");
-  flower.innerHTML = "🌸";
-  flower.style.left = Math.random()*100 + "vw";
-  flower.style.animationDuration = (Math.random()*3+3) + "s";
-  container.appendChild(flower);
-
-  setTimeout(()=>{
-    flower.remove();
-  },6000);
-}
-
-setInterval(createFlower,300);
-
-</script>
-
+</button>
+</a>
 </body>
 </html>
