@@ -1,139 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>Happy Birthday, Love!</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans&display=swap" rel="stylesheet">
-<style>
-  body { margin:0; font-family:'Josefin Sans', sans-serif; color:#333; }
-  header.hero {
-    position: relative;
-    color:#fff;
-    text-shadow: 1px 1px 4px #000;
-    text-align:center;
-    padding:6rem 1rem;
-    overflow:hidden;
-  }
-
-  header.hero::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-   background: (images) center/cover no-repeat;
-    opacity:0.4;   /* controls transparency */
-    z-index:-1;
-  }
-    header.hero h1 { font-family:'Dancing Script', cursive; font-size:3em; margin:0.3em 0; }
-    header.hero p { font-size:1.2em; }
-    #timer { font-size:1.5em; margin-top:0.5em; }
-    section.messages { padding:2em 1em; background:#FFF8E7; text-align:center; }
-    section.messages p { margin:0.8em 0; }
-    .flip-container {
-      display:flex; flex-wrap:wrap; justify-content:center; padding:2em 1em; background:#E6E6FA;
-    }
-    .flip-card {
-      width:220px; height:150px; margin:1em; perspective:1000px;
-    }
-    .flip-card-inner {
-      position:relative; width:100%; height:100%;
-      text-align:center; transition: transform 0.6s; transform-style:preserve-3d;
-      border:1px solid #ddd; border-radius:8px;
-    }
-    .flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
-    .flip-card-front, .flip-card-back {
-      position:absolute; width:100%; height:100%;
-      backface-visibility:hidden; display:flex;
-      justify-content:center; align-items:center; padding:1em;
-      box-sizing:border-box; font-family: inherit;
-    }
-    .flip-card-front { background:#FEC8D6; color:#5E1D4C; font-weight:bold; }
-    .flip-card-back {
-      background:#FFF; color:#5E1D4C; transform:rotateY(180deg);
-    }
-    footer { text-align:center; padding:1em; font-size:0.9em; color:#666; }
-    /* Mobile */
-    @media(max-width:600px){
-      header.hero h1 { font-size:2.2em; }
-      header.hero p, #timer { font-size:1em; }
-      .flip-card { width:100%; margin:0.5em 0; }
-    }
-  </style>
+    <title>Birthday Surprise</title>
+    <style>
+        body {
+            background: url('../images/Snapchat-513806524.jpg') center/cover no-repeat;
+        }
+        /* Other CSS styles... */
+    </style>
 </head>
 <body>
-
-  <header class="hero">
-    <h1>Advance Happy Birthday, My lil potatooo!</h1>
-    <p>Countdown to April 13, 2026:</p>
-    <div id="timer">--d --h --m --s</div>
-  </header>
-
-  <section class="messages">
-    <p>I can’t wait to celebrate you. You light up my world every day.</p>
-    <p>Thank you for making life sweeter. Your birthday is going to be amazing!
-      This is your first birthday that we will celebrate together and i am so excited for it. I hope this day will be as special as you are to me. I love you so much and i wish you all the happiness in the world on your birthday and always.
-    </p>
-    <p>Sending love and big hugs today. 🎂❤️</p>
-  </section>
-
-  <section class="flip-container">
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">Why I Love You</div>
-        <div class="flip-card-back">You are the one which feels like home and close to my heart! 😊</div>
-      </div>
-    </div>
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">Reason #2</div>
-        <div class="flip-card-back">Your smile is my favorite sight. And you cuteness pretty eyes my beautiful baby 😊</div>
-      </div>
-    </div>
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">Reason #3</div>
-        <div class="flip-card-back">I'm so proud of you, always.And i will be there for you always in every moment and situation when you are at your low ❤️</div>
-      </div>
-    </div>
-    <!-- More flip-cards as needed -->
-  </section>
-
-  <footer>
-    Made with ❤️ and excitement for your birthday. See you on April 13!<br>
-    <!-- Social/share links could go here -->
-  </footer>
-
-  <script>
-    // Countdown Script
-    const countdown = () => {
-      const now = new Date();
-      const target = new Date("2026-04-13T00:00:00");
-      const diff = target - now;
-      if (diff < 0) {
-        document.getElementById("timer").innerText = "🎉 Happy Birthday! 🎉";
-        clearInterval(timerInterval);
-        setTimeout(() => {
-          window.open("gift.html", "_blank");
-        }, 2000);
-        return;
-      }
-      const days = Math.floor(diff/86400000),
-            hrs  = Math.floor((diff%86400000)/3600000),
-            mins = Math.floor((diff%3600000)/60000),
-            secs = Math.floor((diff%60000)/1000);
-      document.getElementById("timer").innerText =
-        `${days}d ${hrs}h ${mins}m ${secs}s`;
-    };
-    const timerInterval = setInterval(countdown, 1000);
-    countdown(); // initial call
-  </script>
-
-</button>
-</a>
+    <h1>Welcome to the Birthday Surprise!</h1>
+    <!-- Other content -->
 </body>
 </html>
-
